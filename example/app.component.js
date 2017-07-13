@@ -9,9 +9,6 @@ System.register(["@angular/core"], function (exports_1, context_1) {
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var __metadata = (this && this.__metadata) || function (k, v) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-    };
     var __moduleName = context_1 && context_1.id;
     var core_1, AppComponent;
     return {
@@ -48,15 +45,14 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                         },
                     };
                 }
+                AppComponent = __decorate([
+                    core_1.Component({
+                        selector: 'my-app',
+                        template: "\n    <div style=\"width:300px;padding:10px\"> \n    <typeahead  [(ngModel)]=\"stateList\" [typeAheadSetup]=\"typeAheadSetup\"></typeahead>\n    <div></div>\n    </div>\n    <!--<html-outlet [html]=\"model.template\"></html-outlet>\n    <html-outlet [html]=\"model.template\"></html-outlet>\n    <html-outlet [html]=\"model.template\"></html-outlet>\n    <html-outlet [html]=\"model.template\"></html-outlet>\n    <typehead [(ngModel)]=\"stateList\" [typeAheadSetup]=\"typeAheadSetup\"></typehead>-->\n",
+                    })
+                ], AppComponent);
                 return AppComponent;
             }());
-            AppComponent = __decorate([
-                core_1.Component({
-                    selector: 'my-app',
-                    template: "\n    <div style=\"width:300px;padding:10px\"> \n    <typeahead  [(ngModel)]=\"stateList\" [typeAheadSetup]=\"typeAheadSetup\"></typeahead>\n    <div></div>\n    </div>\n    <!--<html-outlet [html]=\"model.template\"></html-outlet>\n    <html-outlet [html]=\"model.template\"></html-outlet>\n    <html-outlet [html]=\"model.template\"></html-outlet>\n    <html-outlet [html]=\"model.template\"></html-outlet>\n    <typehead [(ngModel)]=\"stateList\" [typeAheadSetup]=\"typeAheadSetup\"></typehead>-->\n",
-                }),
-                __metadata("design:paramtypes", [])
-            ], AppComponent);
             exports_1("AppComponent", AppComponent);
         }
     };

@@ -20,12 +20,11 @@ System.register(["@angular/core", "@angular/router", "@angular/common"], functio
         var DynamicHtmlModule = (function () {
             function DynamicHtmlModule() {
             }
+            DynamicHtmlModule = __decorate([
+                core_1.NgModule({ imports: [common_1.CommonModule, router_1.RouterModule], declarations: [decoratedCmp] })
+            ], DynamicHtmlModule);
             return DynamicHtmlModule;
         }());
-        DynamicHtmlModule = __decorate([
-            core_1.NgModule({ imports: [common_1.CommonModule, router_1.RouterModule], declarations: [decoratedCmp] }),
-            __metadata("design:paramtypes", [])
-        ], DynamicHtmlModule);
         return compiler.compileModuleAndAllComponentsAsync(DynamicHtmlModule)
             .then(function (moduleWithComponentFactory) {
             return moduleWithComponentFactory.componentFactories.find(function (x) { return x.componentType === decoratedCmp; });
@@ -75,20 +74,20 @@ System.register(["@angular/core", "@angular/router", "@angular/common"], functio
                         this.cmpRef.destroy();
                     }
                 };
+                __decorate([
+                    core_1.Input('html'),
+                    __metadata("design:type", String)
+                ], HtmlOutlet.prototype, "html", void 0);
+                __decorate([
+                    core_1.Input('item'),
+                    __metadata("design:type", Object)
+                ], HtmlOutlet.prototype, "item", void 0);
+                HtmlOutlet = __decorate([
+                    core_1.Directive({ selector: 'html-outlet' }),
+                    __metadata("design:paramtypes", [core_1.ViewContainerRef, core_1.Compiler])
+                ], HtmlOutlet);
                 return HtmlOutlet;
             }());
-            __decorate([
-                core_1.Input('html'),
-                __metadata("design:type", String)
-            ], HtmlOutlet.prototype, "html", void 0);
-            __decorate([
-                core_1.Input('item'),
-                __metadata("design:type", Object)
-            ], HtmlOutlet.prototype, "item", void 0);
-            HtmlOutlet = __decorate([
-                core_1.Directive({ selector: 'html-outlet' }),
-                __metadata("design:paramtypes", [core_1.ViewContainerRef, core_1.Compiler])
-            ], HtmlOutlet);
             exports_1("HtmlOutlet", HtmlOutlet);
         }
     };
