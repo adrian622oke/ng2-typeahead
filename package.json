@@ -15,9 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/rajan-g/ng2-typeahead.git"
   },
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
     "@angular/common": "~2.1.1",
     "@angular/compiler": "~2.1.1",
